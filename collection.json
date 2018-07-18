@@ -1,0 +1,34 @@
+{"restaurants":[
+    {
+        "restaurant":{
+            "Id":"1",
+            "Name":"Big Pitcher",
+            "Img_Url":"https://b.zmtcdn.com/data/res_imagery/57833_RESTAURANT_f488ecad8c970d4459cddf4b58326e56.jpg",
+            "Description":"Big Pitcher",
+            "cuisines":"American, Continental, North Indian, Mediterranean, Salad, Steak",
+            "city":"Bangalore"
+        }
+    },
+    {
+        "restaurant":{
+            "Id":"2",
+            "Name":"Rajdhani Thali Restaurant",
+            "Img_Url":"https://b.zmtcdn.com/data/res_imagery/50849_CHAIN_1ab2292dd55f56ea8f0a0e41fe24ae0d.jpg?output-format=webp",
+            "Description":"Rajdhani Thali Restaurant",
+            "cuisines":"North Indian",
+            "city":"Bangalore"
+        }
+
+    },
+    {
+        "restaurant":{
+            "Id":"3",
+            "Name":"Rajdhani",
+            "Img_Url":"https://b.zmtcdn.com/data/res_imagery/50849_CHAIN_1ab2292dd55f56ea8f0a0e41fe24ae0d.jpg?output-format=webp",
+            "Description":"Rajdhani Thali Restaurant",
+            "cuisines":"North Indian",
+            "city":"Bangalore"
+        }
+
+    }
+]}
