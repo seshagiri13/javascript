@@ -3,34 +3,19 @@ window.onload = function () {
     let resid = params.get("resid");
     getrestaurantdetails(resid);
     document.getElementById("btnAdd").addEventListener("click", function (e) {
-        /* var modal=document.getElementById("#modal");
-         e.preventDefault();
-         let id=document.getElementById(resid).id;
-         let name=document.getElementById(resid).title;
-         let imgdetails=document.querySelector("#img").src;
-         let desc=document.getElementById(resid).title;
-         let data=document.querySelector("#cdbody").title.split(';');
-         let cusisines=data[0];
-         let city=data[1];
-         var restaurant={
-             "id": id,
-       "Name": name,
-       "Img_Url": imgdetails,
-       "Description": desc,
-       "cuisines": data[0],
-       "city": data[1]
-         }
-         saverestaurant(restaurant).then(
-             function()
-             {
-                 document.querySelector(".modal-body").innerHTML="Saved Successfully to Collection";
-                 modal.style.display="block";
-             }
-         );*/
-
         e.preventDefault();
         getallusercollection().then(function (data) {
             let dropdown = document.getElementById('inputcoll');
+           
+            var length = dropdown.options.length;
+            for (i = length-1; i>=0; i--) {
+                dropdown.options[i] = null;
+            }
+            let defaultoption;
+            defaultoption = document.createElement('option');
+            defaultoption.text = "Choose..";
+            dropdown.add(defaultoption);
+
             details = JSON.parse(data);
             let option;
             for (var i = 0; i < details.length; i++) {
@@ -51,16 +36,14 @@ window.onload = function () {
         e.preventDefault();
         var modal = document.getElementById("modal");
         modal.style.display = "none";
-        document.getElementById("txtname").value = "";
-        document.getElementById("txtdesc").value = "";
+       
     });
 
     document.getElementById("closebtn").addEventListener("click", function (e) {
         e.preventDefault();
         var modal = document.getElementById("modal");
         modal.style.display = "none";
-        document.getElementById("txtname").value = "";
-        document.getElementById("txtdesc").value = "";
+      
     });
 
     document.getElementById("save").addEventListener("click", function (e) {
